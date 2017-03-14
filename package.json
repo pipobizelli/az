@@ -1,0 +1,21 @@
+{
+  "name": "samsung-wa",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "license": "Private"
+}
