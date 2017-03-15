@@ -1,0 +1,120 @@
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+
+.highlights {
+  background: url('../images/highlights/m-bg.jpg') no-repeat 0 0;
+  background-size: cover;
+  min-height: 320px;
+  padding: 20px;
+  padding-bottom: 90px;
+  position: relative;
+
+  .title {
+    color: @white;
+    font-family: 'quicksandbold';
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .desc {
+    color: @white;
+    font-family: 'quicksandbook';
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .more {
+    color: @white;
+    display: block;
+    font-family: 'quicksandbold';
+    font-size: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .casa {
+    margin-top: 40px;
+
+    .info {
+      color: @white;
+      font-family: 'quicksandbold';
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    >img {
+      margin-top: 5px;
+    }
+
+    .btn_more {
+      background: url('../images/highlights/arrow.png') no-repeat 200px 16px @cornflowerBlue;
+      color: @white;
+      display: block;
+      font-size: 22px;
+      font-family: 'quicksandlight';
+      line-height: 57px;
+      margin-top: 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0 15px;
+      width: 227px;
+
+      strong {
+        font-family: 'quicksandbold';
+      }
+    }
+  }
+
+  .register {
+    background: @cornflowerBlue;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .register_info {
+      background: url('../images/highlights/register_arrow.png') no-repeat 5px 6px;
+      background-size: 5%;
+      color: @white;
+      font-family: 'quicksandbook';
+      font-size: 3.2vw;
+      line-height: 30px;
+      padding-left: 30px;
+      border-bottom: 1px solid @white;
+    }
+
+    .register_form {
+      overflow: hidden;
+    }
+
+    .register_input {
+      background: @white;
+      font-size: 14px;
+      font-family: 'quicksandbook';
+      color: @doveGray;
+      padding: 5px;
+      margin-top: 4px;
+      margin-left: 4px;
+      width: 60.5%;
+    }
+
+    .register_submit {
+      background: url('../images/highlights/arrow.png') no-repeat 32vw center @cornflowerBlue;
+      background-size: 3vw;
+      border: 0;
+      border-left: 1px solid @white;
+      color: @white;
+      font-size: 4vw;
+      font-family: 'quicksandbook';
+      line-height: 40px;
+      text-transform: uppercase;
+      width: 37%;
+      text-align: left;
+      padding-left: 7px;
+    }
+  }
+}

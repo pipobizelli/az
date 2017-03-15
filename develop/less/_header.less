@@ -1,0 +1,113 @@
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+
+header {
+  width: 100%;
+
+  .info {
+    background-color: @cornflowerBlue;
+    color: @white;
+    font-family: 'quicksandbook';
+    font-size: 12px;
+    line-height: 36px;
+    text-align: right;
+    padding: 0 4vw;
+  }
+
+  .menu {
+    background-color: @white;
+    font-size: 0;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .hamburger {
+    background: none;
+    float: left;
+    border: 0;
+    border-top: 5px solid @doveGray;
+    border-bottom: 5px solid @doveGray;
+    vertical-align: top;
+    margin: 4vw;
+    width: 30px;
+
+    &:before {
+      background: @doveGray;
+      content: "";
+      display: block;
+      height: 5px;
+      margin: 5px 0;
+    }
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .links {
+    display: none;
+    background: @white;
+    list-style: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    .link + .link {
+      border-top: 1px solid @wildSand;
+    }
+
+    .link_anchor {
+      cursor: pointer;
+      color: @doveGray;
+      font-family: 'quicksandbold';
+      font-size: 18px;
+      line-height: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  .search {
+    float: right;
+    border: 1px solid @wildSand;
+    vertical-align: top;
+    margin: 2.67vw 4vw;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    box-sizing: content-box;
+    position: relative;
+
+    .serach_button {
+      background: url('../images/ico-search.png') no-repeat 0 0;
+      border: 0;
+      cursor: pointer;
+      width: 25px;
+      height: 25px; 
+      overflow: hidden;
+      text-indent: -999px;
+    }
+  }
+
+  .search_form {
+    display: none;
+    background: @white;
+    right: 0;
+    top: 70px;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    
+    .search_input {
+      border: 1px solid @wildSand;
+      color: @doveGray;
+      font-family: 'quicksandbook';
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 5px;
+    }
+  }
+}

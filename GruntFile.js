@@ -44,7 +44,7 @@ module.exports = function(grunt) {
           yuicompress: false
         },
         files: {
-          'develop/css/app.css':'develop/less/*.less'
+          'develop/css/app.css':'develop/less/_*.less'
         }
       }
     },
@@ -59,22 +59,10 @@ module.exports = function(grunt) {
       dynamic: {                         // Another target
         files: [{
           expand: true,                  // Enable dynamic expansion
-          cwd: 'develop/images/desktop/',                   // Src matches are relative to this path
+          cwd: 'develop/images',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'public/images/desktop'                  // Destination path prefix
-        },
-        {
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'develop/images/mobile/',   
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'public/images/mobile'                  // Destination path prefix
-        },
-        {
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'develop/images/produtos/',   
-          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'public/images/produtos'                  // Destination path prefix
-        },
+          dest: 'public/images/'                  // Destination path prefix
+        }
         ]
       }
     },
@@ -82,10 +70,45 @@ module.exports = function(grunt) {
       main: {
         files: [
           // includes files within path
-          {expand: true, cwd: 'develop/', src: ['index.html'], dest: 'public/'},
-          {expand: true, cwd: 'develop/', src: ['static/**'], dest: 'public/'},
+          // {expand: true, cwd: 'develop/', src: ['index.html'], dest: 'public/'},
           {expand: true, cwd: 'develop/', src: ['fonts/**'], dest: 'public/', filter: 'isFile'},
         ]
+      }
+    },
+    fixturesPath: "develop",
+    htmlbuild: {
+      dist: {
+        src: 'develop/index.html',
+        dest: 'public/',
+        options: {
+          beautify: true,
+          prefix: '',
+          relative: true,
+          basePath: false,
+          scripts: {
+              bundle: [
+                  '<%= fixturesPath %>/js/vendor/*.js'
+              ],
+              main: '<%= fixturesPath %>/js/app.min.js'
+          },
+          styles: {
+              bundle: [
+                  '<%= fixturesPath %>/css/libs.css',
+              ],
+              main: '/css/app.min.css'
+          },
+          sections: {
+            views: [
+              '<%= fixturesPath %>/views/highlights.html',
+              '<%= fixturesPath %>/views/about.html'
+            ],
+            // templates: '<%= fixturesPath %>/templates/**/*.html',
+            layout: {
+                header: '<%= fixturesPath %>/layout/header.html',
+                footer: '<%= fixturesPath %>/layout/footer.html'
+            }
+          }
+        }
       }
     },
     watch: {
@@ -109,6 +132,13 @@ module.exports = function(grunt) {
         options: {
           debounceDelay: 250
         }
+      },
+      htmlbuild: {
+        files: ['develop/index.html', 'develop/layout/*.html', 'develop/views/*.html'],
+        tasks: ['htmlbuild'],
+        options: {
+          debounceDelay: 250
+        }
       }
     }
   });
@@ -121,8 +151,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-html-build');
 
-  grunt.registerTask('default', ['jshint','concat','uglify','less','cssmin','watch', 'copy', 'imagemin']);
-  grunt.registerTask('build', ['jshint','concat','uglify','less','cssmin', 'copy', 'imagemin']);
+  grunt.registerTask('default', ['jshint','concat','uglify','less','cssmin','watch', 'copy', 'htmlbuild','imagemin']);
+  grunt.registerTask('build', ['jshint','concat','uglify','less','cssmin', 'copy', 'htmlbuild', 'imagemin']);
 
 };

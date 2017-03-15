@@ -4,4 +4,27 @@ bin/
 # Other files and folders
 .settings/
 public/
+
+#css
 *.css
+develop/css/*.css
+
+# node stuff
+vendor/
+node_modules/
+
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
