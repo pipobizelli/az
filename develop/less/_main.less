@@ -1,5 +1,42 @@
+@import 'colors';
+
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+.view {
+	margin-top: 60px;
+	padding: 0 10px;
+}
+
+.title {
+	color: @doveGray;
+	font-family: 'quicksandbook';
+	font-size: 30px;
+	letter-spacing: 3px;
+	opacity: .7;
+	text-transform: uppercase;
+}
+
+p {
+	display: block;
+	font-size: 14px;
+	font-family: 'quicksandbook';
+	margin-top: 20px;
+}
+
+.btn {
+	background: url('../images/highlights/arrow.png') no-repeat 200px center @cornflowerBlue;
+	color: @white;
+	display: block;
+	font-size: 15px;
+	font-family: 'quicksandlight';
+	line-height: 50px;
+	margin-top: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 0 15px;
+	width: 227px;
 }
