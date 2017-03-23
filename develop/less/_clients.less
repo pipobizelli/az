@@ -112,4 +112,31 @@
       }
     }
   }
+
+  @media @desktop {
+    > p {
+      max-width: 965px;
+    }
+
+    .clients_list {
+      margin-top: 105px;
+
+      .client {
+        width: 237px;
+        height: 80px;
+
+        &:nth-child(2n) {
+          margin: 0 8px;
+        }
+
+        &:nth-child(6) {
+          margin-left: 0;
+        }
+
+        &:nth-child(10) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }

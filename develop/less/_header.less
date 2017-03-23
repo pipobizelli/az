@@ -12,6 +12,10 @@ header {
     line-height: 36px;
     text-align: right;
     padding: 0 4vw;
+
+    .info_contact {
+      margin-top: 0;
+    }
   }
 
   .menu {
@@ -54,7 +58,7 @@ header {
     left: 0;
     width: 100%;
 
-    + .link {
+    .link + .link {
       border-top: 1px solid @wildSand;
     }
 
@@ -99,6 +103,7 @@ header {
     padding: 10px;
     position: absolute;
     width: 100%;
+    z-index: 9;
 
     .search_input {
       border: 1px solid @wildSand;
@@ -110,8 +115,26 @@ header {
     }
   }
 
+  @media @tablet {
+    .hamburger {
+      margin: 14px 4vw;
+    }
+
+    .search {
+      margin: 8px 4vw;
+    }
+  }
+
   @media @desktop {
+    position: relative;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
+    z-index: 1;
+
     .info {
+      padding: 0;
+
       .info_contact {
         max-width: 1220px;
         margin: 0 auto;
@@ -121,7 +144,8 @@ header {
     .menu {
       max-width: 1220px;
       margin: 0 auto;
-      text-align: left;
+      text-align: right;
+      padding: 20px 0;
     }
 
     .hamburger {
@@ -129,29 +153,45 @@ header {
     }
 
     .logo {
-      display: inline-block;
+      float: left;
     }
 
     .links {
-      display: block;
+      display: inline-block;
+      font-size: 0;
       position: relative;
-      float: right;
       top: 0;
       width: auto;
-      font-size: 0;
 
       .link {
         display: inline-block;
-      }
 
-      + .link {
-        border-top: 0;
+        + .link {
+          border-top: 0;
+          margin-left: 35px;
+        }
       }
 
       .link_anchor {
-        font-family: 'quicksandbook';
+        font-size: 13px;
+        line-height: 53px;
+      }
+    }
+
+    .search {
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px 0 0 4vw;
+      padding: 10px;
+      width: auto;
+
+      .serach_button {
+        color: @doveGray;
         font-size: 14px;
-        line-height: 94px;
+        padding-left: 43px;
+        text-indent: inherit;
+        text-transform: uppercase;
+        width: auto;
       }
     }
   }

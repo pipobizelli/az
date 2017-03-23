@@ -117,4 +117,88 @@
       padding-left: 7px;
     }
   }
+
+  @media @desktop {
+    background: url('../images/highlights/bg.jpg') no-repeat center -50px;
+    background-size: cover;
+    min-height: 1040px;
+    padding: 0;
+
+    .highlights_wrapper {
+      margin: 0 auto;
+      max-width: 1220px;
+      padding-top: 240px;
+    }
+
+    .hl_title {
+      font-size: 60px;
+      text-transform: uppercase;
+    }
+
+    .desc {
+      font-size: 30px;
+      max-width: 600px;
+    }
+
+    .more {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+
+    .casa {
+      margin-top: 100px;
+
+      .info {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      >img {
+        margin-top: 10px;
+      }
+    }
+
+    .register {
+      background: @cornflowerBlue;
+      font-size: 0;
+      position: relative;
+      margin-top: 174px;
+
+      .register_info {
+        background-position: 10px center;
+        background-size: inherit;
+        border-bottom: 0;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 70px;
+        margin: 0;
+        padding-left: 54px;
+        vertical-align: top;
+      }
+
+      .register_form {
+        display: inline-block;
+      }
+
+      .register_input {
+        background: @white;
+        font-size: 18px;
+        padding: 12px 15px;
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 460px;
+      }
+
+      .register_submit {
+        background-position: right center;
+        background-size: inherit;
+        font-size: 18px;
+        line-height: 70px;
+        margin-left: 30px;
+        text-align: left;
+        padding-left: 25px;
+        width: 180px;
+      }
+    }
+  }
 }
