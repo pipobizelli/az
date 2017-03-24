@@ -9,8 +9,8 @@
 }
 
 .view {
-	margin-top: 60px;
-	padding: 0 10px;
+	margin-top: 80px;
+	padding: 0 25px;
 
 	@media @desktop {
 		max-width: 1220px;
@@ -22,19 +22,35 @@
 .title {
 	color: @doveGray;
 	font-family: 'quicksandbook';
-	font-size: 30px;
-	letter-spacing: 3px;
+	font-size: 35px;
 	opacity: .7;
 	text-transform: uppercase;
 
+	.see_all {
+		color: @doveGray;
+		display: block;
+		font-size: 20px;
+		letter-spacing: 4px;
+		margin-top: 10px;
+		text-decoration: underline;
+	}
+
 	@media @desktop {
+		letter-spacing: 3px;
 		font-size: 62px;
+
+		.see_all {
+			font-size: 20px;
+			letter-spacing: 4px;
+			text-decoration: underline;
+			display: inline-block;
+		}
 	}
 }
 
 p {
 	display: block;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: 'quicksandbook';
 	margin-top: 20px;
 

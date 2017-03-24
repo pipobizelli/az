@@ -102,7 +102,8 @@ module.exports = function(grunt) {
               '<%= fixturesPath %>/views/highlights.html',
               '<%= fixturesPath %>/views/about.html',
               '<%= fixturesPath %>/views/clients.html',
-              '<%= fixturesPath %>/views/solutions.html'
+              '<%= fixturesPath %>/views/solutions.html',
+              '<%= fixturesPath %>/views/cases.html'
             ],
             // templates: '<%= fixturesPath %>/templates/**/*.html',
             layout: {

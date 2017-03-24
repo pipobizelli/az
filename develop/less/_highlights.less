@@ -4,28 +4,28 @@
 .highlights {
   background: url('../images/highlights/m-bg.jpg') no-repeat 0 0;
   background-size: cover;
-  min-height: 320px;
-  padding: 20px;
-  padding-bottom: 110px;
+  min-height: 404px;
+  padding: 88px 26px 60px;
+  padding-bottom: 124px;
   position: relative;
 
   .hl_title {
     color: @white;
     font-family: 'quicksandbold';
-    font-size: 30px;
+    font-size: 35px;
+    max-width: 200px;
     text-transform: uppercase;
   }
 
   .desc {
     color: @white;
     font-family: 'quicksandbook';
-    font-size: 15px;
-    margin-top: 10px;
+    font-size: 12px;
   }
 
   .more {
     color: @white;
-    display: block;
+    display: none;
     font-family: 'quicksandbold';
     font-size: 20px;
     margin-top: 20px;
@@ -34,32 +34,35 @@
   }
 
   .casa {
-    margin-top: 40px;
+    margin-top: 45px;
 
     .info {
       color: @white;
       font-family: 'quicksandbold';
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: 1px;
+      margin-top: 0;
+      max-width: 130px;
       text-transform: uppercase;
     }
 
     >img {
-      margin-top: 5px;
+      width: 112px;
     }
 
     .btn_more {
       background: url('../images/highlights/arrow.png') no-repeat 200px center @cornflowerBlue;
+      background-size: 14px;
       color: @white;
       display: block;
-      font-size: 22px;
+      font-size: 12px;
       font-family: 'quicksandlight';
-      line-height: 57px;
-      margin-top: 15px;
+      line-height: 30px;
+      margin-top: 10px;
       text-decoration: none;
       text-transform: uppercase;
-      padding: 0 15px;
-      width: 227px;
+      padding: 0 10px;
+      width: 136px;
 
       strong {
         font-family: 'quicksandbold';
@@ -76,6 +79,7 @@
     bottom: 0;
 
     .register_info {
+      display: none;
       background: url('../images/highlights/register_arrow.png') no-repeat 5px 6px;
       background-size: 5%;
       color: @white;
@@ -133,6 +137,7 @@
     .hl_title {
       font-size: 60px;
       text-transform: uppercase;
+      max-width: none;
     }
 
     .desc {
@@ -141,6 +146,7 @@
     }
 
     .more {
+      display: block;
       font-size: 24px;
       margin-top: 40px;
     }
@@ -151,10 +157,18 @@
       .info {
         font-size: 18px;
         letter-spacing: 2px;
+        max-width: none;
       }
 
       >img {
         margin-top: 10px;
+        width: auto;
+      }
+
+      .btn_more {
+        font-size: 22px;
+        line-height: 57px;
+        width: 227px;
       }
     }
 
@@ -162,7 +176,7 @@
       background: @cornflowerBlue;
       font-size: 0;
       position: relative;
-      margin-top: 174px;
+      margin-top: 169px;
 
       .register_info {
         background-position: 10px center;
@@ -190,7 +204,7 @@
       }
 
       .register_submit {
-        background-position: right center;
+        background-position: 155px center;
         background-size: inherit;
         font-size: 18px;
         line-height: 70px;

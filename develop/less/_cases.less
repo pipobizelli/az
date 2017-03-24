@@ -1,0 +1,91 @@
+@import 'colors';
+@import 'variables';
+
+.cases {
+  .cases_list {
+    width: 100vw;
+    margin: 35px -25px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  .case {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    max-height: 168px;
+    width: 50%;
+
+    &:before {
+      content: "";
+      display: block;
+      background-color: @black;
+      opacity: .7;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .case_image {
+      width: 100%;
+    }
+
+    .case_title {
+      color: @white;
+      font-family: 'quicksandbook';
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      padding: 0 30px;
+      top: 50%;
+      z-index: 3;
+      -ms-transform: translateY(-50%); /* IE 9 */
+      -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+      transform: translateY(-50%);
+    }
+
+    .case_type {
+      display: none;
+    }
+
+    .case_info {
+      font-size: 12px;
+      font-family: 'quicksandbook';
+      color: @white;
+      left: 0;
+      padding: 8px;
+      position: absolute;
+      right: 0;
+      top: 160px;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &.corporate {
+      .case_info {
+        background-color: @cornflowerBlue;
+      }
+    }
+
+    &.home {
+      .case_info {
+        background-color: @victoria;
+      }
+    }
+
+    &.energy {
+      .case_info {
+        background-color: @sushi;
+      }
+    }
+  }
+}

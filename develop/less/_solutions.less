@@ -4,29 +4,27 @@
 .solutions {
   .solutions_list {
     list-style: none;
-    margin-top: 20px;
-    overflow: hidden;
+    margin-top: 35px;
     padding: 0;
 
     .solution {
-      float: left;
-      height: 200px;
-      margin-top: 10px;
-      width: 90%;
+      height: 160px;
+      margin: 0 -25px;
+      padding: 30px 0 0 25px;
+      width: 100vw;
 
       &.corporativo {
-        background: url('../images/solutions/corporativo.jpg') no-repeat center;
+        background: url('../images/solutions/m-corporativo.jpg') no-repeat center;
         background-size: 100%;
       }
 
       &.residencial {
-        float: right;
-        background: url('../images/solutions/residencial.jpg') no-repeat center;
+        background: url('../images/solutions/m-residencial.jpg') no-repeat center;
         background-size: 100%;
       }
 
       &.sustentavel {
-        background: url('../images/solutions/sustentavel.jpg') no-repeat center;
+        background: url('../images/solutions/m-sustentavel.jpg') no-repeat center;
         background-size: 100%;
       }
     }
@@ -35,17 +33,185 @@
       color: @white;
       font-family: 'quicksandbook';
       font-size: 20px;
-      margin: 30px 0 0 20px;
       text-transform: uppercase;
     }
 
     .solution_link {
-      background-color: @aquamarine;
-      background-position: 130px center;
-      line-height: 40px;
-      margin-left: 20px;
-      padding: 0 30px;
-      width: 160px;
+      background-color: transparent;
+      background-position: 120px center;
+      background-size: 10px;
+      border: 1px solid @white;
+      line-height: 34px;
+      padding: 0 44px 0 23px;
+      width: 150px;
+    }
+  }
+
+  .details {
+    margin-top: 83px;
+
+    article {
+      padding: 0 25px;
+      position: relative;
+      text-align: left;
+      width: 100vw;
+
+      .btn {
+        background-position: 115px center;
+        position: absolute;
+        width: 145px;
+      }
+    }
+  }
+
+  .corporate {
+    background: url('../images/solutions/m-corporate.png') no-repeat center bottom;
+    background-size: 100%;
+    max-height: 755px;
+    height: 204vw;
+    margin: 0 -25px;
+
+    .case_title {
+      color: @cornflowerBlue;
+      font-family: 'quicksandbook';
+      font-size: 20px;
+      margin-top: 25px;
+    }
+
+    .case_list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+
+      li {
+        color: @black;
+        font-family: 'quicksandbold';
+        font-size: 12px;
+        line-height: 17px;
+        text-transform: uppercase;
+      }
+    }
+
+    .btn {
+      bottom: 62px;
+      left: 24px;
+    }
+  }
+
+  .home {
+    background: url('../images/solutions/m-home.png') no-repeat center bottom;
+    background-size: 100%;
+    max-height: 850px;
+    height: 225vw;
+    margin: 83px -25px 0;
+
+    .case_title {
+      color: @victoria;
+      font-family: 'quicksandbook';
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    .case_list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+
+      li {
+        color: @black;
+        font-family: 'quicksandbold';
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+      }
+    }
+
+    .btn {
+      bottom: 77px;
+      left: 25px;
+    }
+  }
+
+  .energy {
+    background: url('../images/solutions/m-energy.png') no-repeat center bottom;
+    background-size: 100%;
+    max-height: 755px;
+    height: 204vw;
+    margin: 78px -25px 0;
+
+    .case_title {
+      color: @sushi;
+      font-family: 'quicksandbook';
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    .case_list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+
+      li {
+        color: @black;
+        font-family: 'quicksandbold';
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+      }
+    }
+
+    .btn {
+      bottom: 45px;
+      left: 25px;
+    }
+  }
+
+  @media @desktop {
+    .solutions_list {
+      list-style: none;
+      margin-top: 20px;
+      overflow: hidden;
+      padding: 0;
+
+      .solution {
+        float: left;
+        height: 200px;
+        margin-top: 10px;
+        width: 90%;
+
+        &.corporativo {
+          background: url('../images/solutions/corporativo.jpg') no-repeat center;
+          background-size: 100%;
+        }
+
+        &.residencial {
+          float: right;
+          background: url('../images/solutions/residencial.jpg') no-repeat center;
+          background-size: 100%;
+        }
+
+        &.sustentavel {
+          background: url('../images/solutions/sustentavel.jpg') no-repeat center;
+          background-size: 100%;
+        }
+      }
+
+      .solution_title {
+        color: @white;
+        font-family: 'quicksandbook';
+        font-size: 20px;
+        margin: 30px 0 0 20px;
+        text-transform: uppercase;
+      }
+
+      .solution_link {
+        background-color: @aquamarine;
+        background-position: 130px center;
+        line-height: 40px;
+        margin-left: 20px;
+        padding: 0 30px;
+        width: 160px;
+      }
     }
   }
 }
