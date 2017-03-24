@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'variables';
+
+.blog {
+  background-color: @seashell;
+
+  .blog_wrapper {
+    padding: 42px 0 55px;
+  }
+
+  .posts_list {
+    list-style: none;
+    margin: 35px 0 0;
+    padding: 0;
+  }
+
+  .post {
+    .capa {
+      width: 100vw;
+      margin: 0 -25px;
+    }
+
+    .type {
+      margin-top: 17px;
+    }
+
+    .post_title {
+      color: @black;
+      font-family: 'quicksandbold';
+      font-size: 24px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .post_desc {
+      color: @black;
+      font-family: 'quicksandbook';
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-position: 110px center;
+      margin-top: 20px;
+      width: 150px;
+    }
+  }
+}
